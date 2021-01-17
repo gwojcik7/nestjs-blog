@@ -12,7 +12,7 @@ import configuration from './config/configuration';
       isGlobal: true,
       load: [configuration]
     }),
-    MongooseModule.forRoot(`mongodb+srv://${process.env.MONGO_DB_USER}:${encodeURI(process.env.MONGO_DB_PASSWORD)}@${process.env.MONGO_DB_URL}/${process.env.MONGO_DB_NAME}?retryWrites=true&w=majority`),
+    MongooseModule.forRoot(`mongodb+srv://${process.env.MONGO_DB_USER}:${encodeURI(process.env.MONGO_DB_PASSWORD)}@${process.env.MONGO_DB_NAME}.${process.env.MONGO_DB_SERVER}?retryWrites=true&w=majority`),
     AuthorModule,
     CategoryModule,
     ArticleModule,
